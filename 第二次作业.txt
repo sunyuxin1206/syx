@@ -1,0 +1,7 @@
+import requests
+url = 'https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%B0%8F%E6%A8%B1&step_word=&hs=2&pn=40&spn=0&di=24317954980&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1681458667%2C58225392&os=2321436377%2C2486045279&simid=3436329122%2C360061684&adpicid=0&lpn=0&ln=1984&fr=&fmq=1528593402301_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201406%2F08%2F20140608122511_niCJm.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B17tpwg2_z%26e3Bv54AzdH3Fks52AzdH3F%3Ft1%3Dcnnm8l008&gsm=0&rpstart=0&rpnum=0&islist=&querylist='
+response = requests.get(url)
+response.encoding='utf-8'
+print(response.text)
+with open('C:\\Users\\ASUS\\Desktop\\syx\\syx.html','w',encoding='utf-8') as f:
+    f.write(response.text)
